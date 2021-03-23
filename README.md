@@ -1,14 +1,14 @@
 # AXI-General-Matrix-Multiplication
 In this repository, we create the general matrix multiplication base on 4x4 systolic array processing element. Firstly, we need to say that, in the data path section, we use the code from https://github.com/jofrfu/tinyTPU and we design a new control section which can perform NxM matrix multiplication.
 
-# Introduction
+## Introduction
 This project is aim for create the general matrix multiplication which can specified the matrix size for both input and weight. The matrix multiplication is use in widely area such as machine lerning. So, in FPGA, we can build custom hardware architecture which can parallelize the matrix computation. 
 
-# Architecture 
+## Architecture 
 In the architecture section, we separate into two section: data and control path. In the data path, it just only ram for unified input and weight, systolic setup and systolic array. The difficult in this section is how to control it. So, in this, we show that we control all the part in the data path section. 
 
-# Specification 
+## Specification 
 As the data path we use the code from tinyTPU, so the specification is similar to this tinyTPU but we can perform dynamic NxM matrix multiplication. The size of the matrix is limit but large enough due to we have limit BRAM resorce in FPGA. Therefore, if you have large FPGA, you can do it in larger size. 
 
-# Implementation and testing 
+## Implementation and testing 
 We implement this HDL code with AXI interface for setup the data which is fetching the unified input and weight. To receive the result data, we send it to the AXI DMA using AXI-stream interface. Moreover, we test it on zybo board which is 7z010 FPGA borad. The C code is attach in this repository, but to be honest, it is not well organize. 
