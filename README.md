@@ -11,4 +11,5 @@ In the architecture section, we separate into two section: data and control path
 As the data path we use the code from tinyTPU, so the specification is similar to this tinyTPU but we can perform dynamic NxM matrix multiplication. The size of the matrix is limit but large enough due to we have limit BRAM resorce in FPGA. Therefore, if you have large FPGA, you can do it in larger size. 
 
 ## Implementation and testing 
+![Capture](https://user-images.githubusercontent.com/9088660/112315137-662f4600-8cdc-11eb-8621-f49908b62a9d.PNG)
 We implement this HDL code with AXI interface for setup the data which is fetching the unified input and weight. To receive the result data, we send it to the AXI DMA using AXI-stream interface. Moreover, we test it on zybo board which is 7z010 FPGA borad. The C code is attach in this repository, but to be honest, it is not well organize. 
