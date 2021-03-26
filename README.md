@@ -5,6 +5,7 @@ In this repository, we create the general matrix multiplication base on 4x4 syst
 This project is aim for create the general matrix multiplication which can specified the matrix size for both input and weight. The matrix multiplication is use in widely area such as machine lerning. So, in FPGA, we can build custom hardware architecture which can parallelize the matrix computation. 
 
 ## Architecture 
+![Blank diagram (3)](https://user-images.githubusercontent.com/9088660/112641711-35364900-8e75-11eb-856c-a12c20afcdd5.png)
 In the architecture section, we separate into two section: data and control path. In the data path, it just only ram for unified input and weight, systolic setup and systolic array. The difficult in this section is how to control it. So, in this, we show that we control all the part in the data path section. 
 
 ## Specification 
