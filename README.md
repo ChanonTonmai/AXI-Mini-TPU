@@ -1,4 +1,4 @@
-# AXI-General-Matrix-Multiplication
+# AXI-TPU
 In this repository, we create the general matrix multiplication base on 4x4 systolic array processing element. Firstly, we need to say that, in the data path section, we use the code from https://github.com/jofrfu/tinyTPU and we design a new control section which can perform NxM matrix multiplication.
 
 ## Introduction
